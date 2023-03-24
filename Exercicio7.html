@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <script>
+        document.write(`<button id="Anive" onclick="aniv()">Data de Nascimento</button>`)
+       function aniv(){
+            var DataRec = prompt('Digite sua data de nascimento no formato DD/MM/AAAA')
+            var sepData = DataRec.split('/')
+            var atualData = new Date().toLocaleDateString()
+            var atualDataSep = atualData.split('/')
+            if(sepData[1] > atualDataSep[1] || (sepData[1] == atualDataSep[1] && sepData[0] > atualDataSep[0])){
+               document.write(`${atualDataSep[2] - sepData[2] - 1}`) 
+            }
+            else{
+                document.write(`${atualDataSep[2] - sepData[2]}`)
+            }
+        }
+    </script>
+</body>
+</html>

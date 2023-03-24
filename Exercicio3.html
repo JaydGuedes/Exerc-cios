@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+</head>
+<body>
+    <script>
+        let nom = prompt('Digite seu nome completo')
+        let nomSep = nom.split(' ')
+        let nomDesc = " "
+        let part = nomSep.length 
+        for (let k = part; k > 0; k--) {
+            part--            
+            nomDesc += nomSep[part] + " "             
+        } 
+        document.write(`${nomDesc}`)
+    </script>
+</body>
+</html>
